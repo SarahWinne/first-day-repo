@@ -1,0 +1,32 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+table {
+    border-spacing: none;
+    color: #333333;
+    align-self: center;
+}
+
+th {
+    color: #ffffff;
+    background-color: #90b4d6;
+    align-items: center;
+    letter-spacing: 2px;
+    padding: 5px 30px 5px 10px;
+    text-size-adjust: 18px;
+    margin: 0;
+}
+
+td {
+    padding: 5px 30px 5px 10px;
+    text-size-adjust: 18px;
+    margin: 0;
+    text-align: left;
+    background-color: #84b3ad;
+    width: 150px;
+}
+
+tr:nth-child(even) td, tr:nth-child(even) th {
+	background-color: #689ad8;
+}
