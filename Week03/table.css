@@ -7,12 +7,14 @@ table {
     border-collapse: collapse;
     color: #333333;
     align-self: center;
+    width: 100%;
 }
+
 
 th {
     color: #ffffff;
     background-color: #90b4d6;
-    align-items: center;
+    text-align: center;
     letter-spacing: 2px;
     padding: 5px 30px 5px 10px;
     text-size-adjust: 18px;
