@@ -5,8 +5,7 @@
 
 body{
     width: 960px;
-    /* align might be wrong? */
-    align-self: center; 
+    align-content: center; 
     font-family: Arial, sans-serif;
     color: #fcfcfc;
     background: #355664;
@@ -20,6 +19,7 @@ h1 {
     font-size: 50px;
     padding: 10px 0 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -28,6 +28,7 @@ h2 {
     text-align: center;
     border-bottom: 3px solid #416371;
     padding-bottom: 20px;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -73,6 +74,17 @@ a {
     margin: 5px 2px;
     padding: 7px 10px 4px;
     font-size: 30px;
+    text-transform: uppercase;
+}
+
+li:first-child a {
+    color: #7CB3E9;
+    text-transform: lowercase;
+}
+
+a[title="sweet tabs"] {
+    color: #8EC45B;
+    text-transform: capitalize;
 }
 
 article {
