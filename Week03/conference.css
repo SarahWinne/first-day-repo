@@ -1,0 +1,116 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    src: url(https://fonts.gstatic.com/s/lato/v24/S6u8w4BMUTPHh30AUi-qNiXg7eU0.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+body {
+    font: 300 16px/22px "Lato", thin, sans-serif;
+    color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #012248;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    line-height: 30px;
+    height: 30px;
+    padding: 15px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header {
+    background-color: #012248;
+}
+
+.container {
+    align-self: center;
+    padding: 0 10px;
+    height: 500px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: lighter;
+    padding: 80px 0;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+p.head {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.btn {
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 15px 45px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    color: #012248;
+    text-decoration: #012248;
+    background: #ffffff;
+    border-color: #ffffff;
+    cursor: pointer;
+}
+
+main {
+    border: 1px solid #012248;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #012248;
+}
+
+img {
+    width: 300px;
+}
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 15px;
+}
+  
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+p.article {
+    color: #012248;
+}
+
+footer {
+    background-color: #012248;
+}
