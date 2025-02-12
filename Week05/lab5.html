@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+</head>
+<body>
+    
+    <script>
+        function calculate (){
+            let x = (35-14)*2;
+            x = x + 30 + 25;
+            // document.write(x);
+            alert(x);
+        }
+        
+        function biggerNumber (){
+            let n1 = document.getElementById('number1').value; 
+            let n2 = document.getElementById('number2').value;
+            if (parseInt(n1)>parseInt(n2)) {
+                // document.writeln(n1);
+                alert(n1);
+            } else if (parseInt(n2)>parseInt(n1)){
+                // document.writeln(n2);
+                alert(n2);
+            }
+        }
+    </script>
+
+<button onclick="calculate()">Calculate</button>
+
+<input type="number" id="number1" placeholder="Number 1"/>
+<input type="number" id="number2" placeholder="Number 2"/>
+<button onclick="biggerNumber()">Bigger Number </button>
+
+</body>
+</html>

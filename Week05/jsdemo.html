@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Demo</title>
+</head>
+<body>
+
+    <p id="text" ondblclick="bigger()"> </p>
+    <p class="words"> </p>
+    
+    <script>
+        let size=12;
+
+        function sayHi(name){
+            alert('Hi ' + name);
+        }
+
+        function press(){
+            let name=document.getElementById('username').value;
+            sayHi(name);
+
+            let p=document.getElementById('text');
+            p.style="font-size:20px; color:green;";
+        }
+
+        function bigger(){
+            let p=document.getElementById('text');
+            size = size*2;
+            p.style="font-size:" + size + "px;";
+        }
+
+        if(true){
+            let x=20;
+            var y=30;
+            document.write(x);
+            document.write(y);
+        }
+
+        for(var i=0; i<10; i++){
+            document.writeln("Hey");
+        }
+        
+        document.write("<h1>Hello World</h1>");
+        document.getElementById("text").innerHTML="Words";
+        document.getElementsByClassName("words")[0].innerHTML="Text";
+
+        console.log("This is text");
+
+        // alert("Hello")
+
+        const car = {type:"Fiat", model:"500", color:"white"};
+        document.writeln(car.type);
+        delete car.model;
+        // document.write(car.model);
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.writeln(person.fullName());
+
+    </script>
+    <input type="text" id="username" placeholder="Enter your name here"/>
+    <button id="btn" onclick="press()">Go</button>
+
+    <button id="big" ondblclick="bigger()">Bigger</button>
+
+</body>
+</html>
