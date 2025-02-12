@@ -26,13 +26,42 @@
                 alert(n2);
             }
         }  
-    </script>
 
-<button onclick="calculate()">Calculate</button>
+        function printElements (){
+            let things = document.getElementByName('things[]');
+            let l = ""; 
+            for(var i=0; i<things.length; i++){
+                let x = things[i].value;
+                l = l+x;
+            }
+            document.writeln(l);
+
+            // alert(l);
+        }  
+
+        for(var i=0; i<20; i++){
+            i++;
+            document.writeln(i);
+            i++;
+            document.writeln(i);
+            i++;
+            document.writeln(i);
+            i++;
+            document.writeln(i + "<br>");
+            i--;
+        }
+    </script>
+<form>
+<button onclick="calculate()">Calculate</button><br>
 
 <input type="number" id="number1" placeholder="Number 1"/>
 <input type="number" id="number2" placeholder="Number 2"/>
-<button onclick="biggerNumber()">Bigger Number </button>
+<button onclick="biggerNumber()">Bigger Number </button><br>
 
+<input type="text" name="things[]" placeholder="A thing"/><br>
+<input type="text" name="things[]" placeholder="A thing"/><br>
+<input type="text" name="things[]" placeholder="A thing"/><br>
+<button onclick="printElements()">Print Things</button> </button>
+</form>
 </body>
 </html>
