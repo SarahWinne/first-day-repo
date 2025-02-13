@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<body>
+    <div id="bgcolor" style="background-color: black;"> Things in div <hr> More things <hr> Even More</div>
+
+    <script>
+        var x = document.getElementById("bgcolor");
+        x.addEventListener("mouseover", changeColor);
+        x.addEventListener("mouseout", changeColorBack);
+
+        function changeColor(){
+            x.style.backgroundColor="red";
+        }
+        function changeColorBack(){
+            x.style.backgroundColor="black";
+        }
+    </script>
+</body>
+</html>
