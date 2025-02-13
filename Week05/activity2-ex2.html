@@ -6,6 +6,20 @@
     <title>Exercise 2</title>
 </head>
 <body>
-    
+    <div id="text">The moon is made of cheddar cheese, but keep this a secret.</div>
+    <button id="btn" onclick="toggle()">Hide Secret</button>
+
+    <script>
+        function toggle(){
+            if (document.getElementById("text").style.display=="none"){
+                document.getElementById("text").style.display="block";
+                document.getElementById("btn").textContent="Hide Secret";
+            } else {
+            document.getElementById("text").style.display="none";
+            document.getElementById("btn").textContent="Reveal Secret";
+            }
+        }
+    </script>
+
 </body>
 </html>

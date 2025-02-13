@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <input type="text" id="textInput" placeholder="Item">
+    <button id="btn" onclick="addItem()"> Add item</button>
+
+    <script>
+        function addItem(){
+            let text = document.getElementById('textInput').value; 
+
+            var new_item = document.createElement('li');
+            new_item.innerText = text;
+
+            let list = document.getElementById('list');
+            list.appendChild(new_item);
+        }
+    </script>
+</body>
+</html>
