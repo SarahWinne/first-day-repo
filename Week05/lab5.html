@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 5</title>
+    <style>
+        table, td, tr {border: solid black 2px;
+                border-collapse: collapse;
+                padding: 5px;}
+    </style>
 </head>
 <body>
+
+    <table style="border: solid black 2px">
+        <tr>
+            <td id="s1"></td>
+            <td id="s2"></td>
+            <td id="s3"></td>
+            <td id="s4"></td>
+        </tr>
+        <tr>
+            <td id="s5"></td>
+            <td id="s6"></td>
+            <td id="s7"></td>
+            <td id="s8"></td>
+        </tr>
+        <tr>
+            <td id="s9"></td>
+            <td id="s10"></td>
+            <td id="s11"></td>
+            <td id="s12"></td>
+        </tr>
+        <tr>
+            <td id="s13"></td>
+            <td id="s14"></td>
+            <td id="s15"></td>
+            <td id="s16"></td>
+        </tr>
+    </table>
     
     <script>
         function calculate (){
@@ -41,15 +73,31 @@
 
         for(var i=0; i<20; i++){
             i++;
-            document.writeln(i);
+            // document.writeln(i);
+            document.getElementById("s"+i).innerHTML=i;
             i++;
-            document.writeln(i);
+            // document.writeln(i);
+            document.getElementById("s"+i).innerHTML=i;
             i++;
-            document.writeln(i);
+            // document.writeln(i);
+            document.getElementById("s"+i).innerHTML=i;
             i++;
-            document.writeln(i + "<br>");
+            // document.writeln(i + "<br>");
+            document.getElementById("s"+i).innerHTML=i;
             i--;
         }
+
+        // var x = 1;
+        // document.write("<table>");
+        // for(var i; i<4; i++){
+        //     document.write("<tr>");
+        //         for(var k; k<4; k++){
+        //             document.write("<td>"+x+"</td>");
+        //             x++;
+        //         }
+        //     document.write("</tr>");
+        // }
+        // document.write("</table>");
     </script>
 <form>
 <button onclick="calculate()">Calculate</button><br>
