@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="covid1"></canvas>
+    </div>
+    <script>
+        async function fetchData() {
+            const response = await fetch('https://disease.sh/v3/covid-19/all');
+            const data = await response.json();
+            console.log(data);
+            // document.writeln(data.cases);
+            // covidData = [data.population, data.cases, data.recovered, data.deaths];
+            // covidData = [data.cases]
+            return data;
+        }
+
+        fetchData().then(
+  function(value) {
+
+    console.log('data retrieved', value);
+loadChart(value);
+
+
+  },
+);
+
+
+function loadChart(covidData){
+    const ctx = document.getElementById('covid1');
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Cases', 'Recovered', 'Active', 'Deaths'],
+          // labels: ['Cases'],
+          datasets: [{
+            label: '#',
+            data: [covidData.cases, covidData.recovered, covidData.active, covidData.deaths],
+            borderWidth: 1,
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+              // 'rgba(54, 162, 235, 0.2)',
+              // 'rgba(153, 102, 255, 0.2)',
+              // 'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 159, 64)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)'
+              // 'rgb(54, 162, 235)',
+              // 'rgb(153, 102, 255)',
+              // 'rgb(201, 203, 207)'
+            ]
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+}
+       
+    </script>
+</body>
+</html>

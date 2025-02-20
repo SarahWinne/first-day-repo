@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-3.0.0.min.js" charset="utf-8"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="myDiv1"></div>
+    <div id="myDiv2"></div>
+
+    <script>
+        var data = [{
+            values: [19, 26, 55],
+            labels: ['Residential', 'Non-Residential', 'Utility'],
+            type: 'pie'
+        }];
+
+        var layout = {
+            height: 400,
+            width: 500
+        };
+
+        Plotly.newPlot('myDiv1', data, layout);
+
+        var data = [{
+            x: ['giraffes', 'orangutans', 'monkeys', 'trees'],
+            y: [20, 14, 23, 25],
+            type: 'bar'
+        }];
+
+        Plotly.newPlot('myDiv2', data);
+
+    </script>
+</body>
+</html>
