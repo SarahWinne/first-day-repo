@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <img id="image" src="apple.png">
+    <button id="btn" onclick="swap()">Swap Image</button>
+
+    <script>
+        function swap(){
+            if(this.booleanValue === true){
+                this.booleanValue = false
+                document.getElementById('image').src = "banana.png";
+            } else{
+                this.booleanValue = true
+                document.getElementById('image').src = "apple.png";
+            }
+        }
+    </script>
+</body>
+</html>
