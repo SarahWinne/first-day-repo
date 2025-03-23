@@ -7,15 +7,17 @@
 </head>
 <body>
     <form onsubmit="functionSubmit()"> 
-        Enter name: <input type="text" name="name">
+        Enter name: <input id="name" type="text" name="name">
         <input type="submit" value="Submit">
     </form>
 
     <script>
         function functionSubmit(){
-            if (document.getElementByName('name').value = null){
-                submit.preventDefault()
-                alert("Put a name in the textbox")
+            if (document.getElementById('name').value == null || document.getElementById('name').value == ""){
+                event.preventDefault()
+                alert("You must fill out the text box")
+            } else {
+                alert("hello " + document.getElementById('name').value)
             }
         }
     </script>
