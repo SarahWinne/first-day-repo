@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var app = express.Router();
+// var app = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -13,24 +13,25 @@ let users = [
   { id: 2, name: 'Bob', email: 'bob@example.com' }
 ];
 
-app.get('/users', (req, res) => {
+router.get('/all', (req, res) => {
   res.json(users); // Respond with the list of users
 });
 
 // POST users and their info
-app.post('/users/new', function(req, res, next) {
-  var id= req.params.id;
+router.post('/new', function(req, res, next) {
+  var id= req.body.id;
   var name= req.body.name;
   var email= req.body.email;
   var newUser = {id:id, name:name, email:email}
-  var user=readFile();
-  user.push(newUser);
-  writeFile(note);
-  res.render('index', { title: 'Users', data: user, currentDate: Date.now()});
+  // var user=readFile();
+  users.push(newUser);
+  // writeFile(note);
+  //res.render('index', { title: 'Users', data: users, currentDate: Date.now()});
+  res.json(users); 
 });
 
 // PUT 
-app.put('/users/edit/:id', function(req, res, next) {
+router.put('/edit/:id', function(req, res, next) {
   var id= req.params.id;
   var name= req.body.name;
   var email= req.body.email;
@@ -45,7 +46,7 @@ app.put('/users/edit/:id', function(req, res, next) {
 });
 
 // DELETE user
-app.delete('/notes/delete/:id', function(req, res, next) {
+router.delete('/delete/:id', function(req, res, next) {
   var id= req.params.id;
   var user=readFile();
   user = user.filter(users => users.createdAt !== id); 
